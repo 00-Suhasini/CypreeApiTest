@@ -1,0 +1,15 @@
+
+{
+    "category": {
+        "id": 1,
+        "name": "dog"
+    },
+
+    "name": "CypressDog",
+
+    "photoUrls": [
+        "photo"
+    ],
+
+    "status": "available"
+}

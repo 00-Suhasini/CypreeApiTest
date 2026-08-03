@@ -1,0 +1,12 @@
+
+import potService from "../../services/potService";
+
+describe("del pet api",()=>{
+    it("delete pet api",()=>{
+        potService.deletePet(12345)
+        .then((response)=>{
+            expect(response.status).to.eq(404);
+            
+        })
+    })
+})

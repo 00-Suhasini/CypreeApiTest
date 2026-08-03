@@ -1,0 +1,25 @@
+
+import potService from "../../services/potService";
+
+describe("update pet api",()=>{
+    it("verify/update pet api",()=>{
+        const payload={
+
+id:12345,
+
+name:"UpdatedPet",
+
+photoUrls:["photo"],
+
+status:"sold"
+
+};
+
+            potService.updatePet(payload)
+            .then((response)=>{
+                expect(response.status).to.eq(200);
+                expect(response.body.name).to.eq("UpdatedPet");
+            });
+        
+    });
+});

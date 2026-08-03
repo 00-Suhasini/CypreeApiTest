@@ -1,0 +1,17 @@
+
+import potService from "../../services/potService";
+
+describe("create pet api",()=>{
+ it("create new api",()=>{
+    //calling fixture test data
+    cy.fixture("pet")
+    .then((data)=>{
+       potService.createPet(data)
+       .then((response)=>{
+        expect(response.status).to.eq(200);
+        expect(response.body.name).to.eq("CypressPet");
+       });
+    });
+       
+ });
+});

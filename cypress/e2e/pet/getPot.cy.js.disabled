@@ -1,0 +1,13 @@
+
+import potService from "../../services/potService";
+
+describe("GET Pet api",()=>{
+    it("verify get api",()=>{
+        potService.getPet(12345)
+        .then((response)=>{
+            expect(response.status).to.eq(200);
+            expect(response.body.id).to.eq(12345);
+            expect(response.body.name).to.eq("CypressPet");
+        });
+    });
+});
